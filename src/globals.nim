@@ -17,13 +17,11 @@ const
   ONE_HUNDRED* = 100
 
 type
-  region_size_t* = cushort
+  RSize* = cushort
 
 proc strcmp*(str1: cstring, str2: cstring): cint {.importc, header:"<string.h>".}
 proc strcpy*(dest: cstring, src: cstring): cstring {.importc, header:"<string.h>".}
 proc printf*(fmt: cstring) {.varargs, importc, header:"<stdio.h>".}
 proc sprintf*(buf: cstring, fmt: cstring): cint {.varargs, importc, header:"<string.h>".}
-proc memset*(str: pointer, c: int, n: csize): pointer {.importc, header:"<string.h>".}
 proc malloc*(size: cint): pointer {.importc, header:"<stdlib.h>".}
 proc free*(point: pointer) {.importc, header:"<stdlib.h>".}
-proc calloc*(nitems: csize, size: csize): pointer {.importc, header:"<stdlib.h>".}
