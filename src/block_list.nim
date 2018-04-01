@@ -15,10 +15,6 @@ import
   globals, memory
 
 ##  Block node
-
-proc `==`*(left: Pointer, right: Pointer): bool {.inline.} =
-  result = cast[ByteAddress](left) == cast[ByteAddress](right)
-
 type
   block_node* {.bycopy.} = object
     size*: region_size_t
