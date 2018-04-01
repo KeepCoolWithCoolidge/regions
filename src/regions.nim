@@ -54,9 +54,9 @@ proc rinit*(region_name: cstring; region_size: region_size_t): bool =
           assert(nil == chosen_region.block_list)
 
 
-        dealloc(chosen_region.name)
-        dealloc(chosen_region.data)
-        dealloc(chosen_region)
+        free(chosen_region.name)
+        free(chosen_region.data)
+        free(chosen_region)
         chosen_region = nil
         assert(nil == chosen_region)
 

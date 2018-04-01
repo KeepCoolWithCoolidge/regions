@@ -12,7 +12,7 @@
 ##       CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 import
-  globals
+  globals, block_list
 
 ##  Memory region node
 
@@ -22,7 +22,7 @@ type
     size*: region_size_t
     bytes_used*: region_size_t
     data*: pointer
-    block_list*: pointer
+    block_list*: ptr block_node
     next*: ptr region_node
 
 
